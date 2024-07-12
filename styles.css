@@ -1,0 +1,498 @@
+/* Importando fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --cor-azul: #1883a5;
+    --cor-cinza-escuro: #373737;
+    --cor-azul-claro: #e0f7fa;
+    --cor-branco: #fff;
+
+    --font-titulo: "Roboto";
+    --font-texto: "Montserrat";
+}
+
+body {
+    font-family: var(--font-titulo);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+}
+
+header {
+    background-color: var(--cor-cinza-escuro);
+    color: var(--cor-branco);
+}
+
+header .container {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    padding-left: 10em;
+    padding-right: 10em;
+    margin: 0 auto;
+}
+
+.cabecalho__logo {
+    display: flex;
+    padding-top: 0.4em;
+    padding-bottom: 0.2em;
+    width: 100%;
+    height: 4vh;
+}
+
+header .contact-info {
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1em;
+    font-family: var(--font-texto);
+    font-size: 1.5em;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+.dropdown-menu {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    background-color: var(--cor-azul-claro);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 999;
+    width: 100%;
+    max-width: 410px;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #e0f7fa;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.hero {
+    background: url('/assets/img/hero.png') no-repeat center center/cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    font-size: 2.5em;
+    font-family: var(--font-titulo);
+    font-weight: 500;
+}
+
+.hero .cta {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--cor-azul);
+    color: var(--cor-azul-claro);
+    text-decoration: none;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.about, .services, .testimonials, .contact, footer {
+    max-width: 1980px;
+    padding-top: 3em;
+    padding-bottom: 1em;
+    padding-left: 10em;
+    padding-right: 10em;
+    margin: 0 auto;
+    text-align: left;
+    font-family: var(--font-titulo);
+    font-size: 1.5em;
+}
+
+.about {
+    background-color: #e0f7fa;
+}
+
+.about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.about .text-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin-right: 20px;
+}
+
+.about h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.about p {
+    margin-bottom: 1em;
+    font-family: var(--font-texto);
+}
+
+.about ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    font-family: var(--font-texto);
+}
+
+.about .image-content {
+    width: 100%;
+    max-width: 45%;
+    padding-top: 4em;
+}
+
+.about img {
+    width: 100%;
+    height: auto;
+}
+
+.services {
+    background-color: var(--cor-azul);
+    color: var(--cor-branco);
+}
+
+.services h2 {
+    font-family: var(--font-titulo);
+    font-weight: 600;
+    font-size: 1.8em;
+    padding-bottom: 0.5em;
+}
+
+.services .services-content {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    color: var(--cor-cinza-escuro);
+}
+
+.services .service-card {
+    width: 25%;
+    margin: 0.5%;
+    text-align: left;
+    font-family: var(--font-texto);
+    font-size: 0.8em;
+    background-color: var(--cor-branco);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+}
+
+.services .service-card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.services .service-card h3 {
+    margin-top: 0.5em;
+    font-family: var(--font-titulo);
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.testimonials {
+    background-color: var(--cor-azul-claro);
+}
+
+.testimonials .testimonials-content {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.testimonials h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    font-family: var(--font-titulo);
+}
+
+.testimonials .testimonial {
+    width: 45%;
+    margin: 2.5%;
+    text-align: left;
+    font-family: var(--font-texto);
+    background-color: var(--cor-branco);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.testimonials .testimonial img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.contact {
+    background-color: var(--cor-azul);
+    color: var(--cor-branco);
+    text-align: center;
+    font-family: var(--font-titulo);
+}
+
+.contact h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.contact p {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.privacy {
+    font-size: 0.6em;
+    color: var(--cor-branco);
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    font-family: var(--font-texto);
+}
+
+.contact form input, .contact form select, .contact form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid var(--cor-cinza-escuro);
+    border-radius: 5px;
+    color: var(--cor-cinza-escuro);
+}
+
+.contact form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e0f7fa;
+    color: #1883a5;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-texto);
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #373737;
+    color: #fff;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer .contact-info, .quick-links, .social-media {
+    margin: 10px 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer .footer-dev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+footer .footer-dev img {
+    width: 5em;
+}
+
+@media (max-width: 410px) {
+    header .container {
+        flex-direction: row;
+        padding-top: 1em;
+        padding-left: 2em;
+        padding-right: 4em;
+    }
+
+    .cabecalho__logo {
+        display: flex;
+        padding-top: 0.4em;
+        padding-bottom: 0.4em;
+        width: 100%;
+        height: 7vh;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    header nav a {
+        margin: 10px 0;
+    }
+
+    .hero {
+        background: url('/assets/img/hero_mobile.png') no-repeat center center/cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 6em;
+        padding-bottom: 2em;
+        padding-left: 0.3em;
+        padding-right: 0.3em;
+        font-size: 2em;
+        font-family: var(--font-titulo);
+        font-weight: 300;
+    }
+
+    .hero h1 {
+        background-color: #37373760;
+    }
+
+    .hero p {
+        display: none;
+    }
+
+    .hero .cta {
+        padding: 0.4em 1em;
+        background-color: var(--cor-azul);
+        color: var(--cor-azul-claro);
+        text-decoration: none;
+        margin-top: 3em;
+        font-family: 'Montserrat', sans-serif;
+        border-radius: 25px;
+        font-size: 0.7em;
+    }
+
+    .services .service-card, .testimonials .testimonial {
+        width: 100%;
+        margin: 10px 0;
+        
+    }
+
+    .about, .services, .testimonials, .contact, footer {
+        max-width: 410px;
+        padding-top: 3em;
+        padding-bottom: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        text-align: center;
+        font-family: var(--font-titulo);
+        font-size: 1em;
+    }
+
+    .about .text-content {
+        max-width: 100%;
+        justify-content: center;
+        margin-right: -5px;
+        font-family: var(--font-texto);
+        padding-top: 2em;
+    }
+
+    .about .image-content {
+        width: 100%;
+        max-width: 100%;
+        padding-top: 2em;
+    }
+
+    .services .services-content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        text-align: center;
+        color: var(--cor-cinza-escuro);
+    }
+
+    .services .service-card img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        padding-bottom: 2em;
+    }
+
+    .services .service-card {
+        width: 95%;
+        margin: 2%;
+        text-align: center;
+        font-family: var(--font-texto);
+        font-size: 0.8em;
+        background-color: var(--cor-branco);
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 2em;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}

@@ -1,0 +1,104 @@
+/* reset.css */
+
+/* Remove margin, padding, and border from all elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Set a consistent font for all text */
+body, button, input, select, textarea {
+    font-family: sans-serif;
+}
+
+/* Remove default list styling */
+ul, ol {
+    list-style: none;
+}
+
+/* Remove default link styling */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Reset table styles */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Remove default blockquote styling */
+blockquote, q {
+    quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: '';
+    content: none;
+}
+
+/* Reset form elements */
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    color: inherit;
+}
+
+/* Set a consistent base line height */
+body {
+    line-height: 1.5;
+}
+
+/* Remove default styling for figure */
+figure {
+    margin: 0;
+}
+
+/* Ensure images fit within their containers */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove default fieldset styling */
+fieldset {
+    border: none;
+}
+
+/* Remove default iframe border */
+iframe {
+    border: none;
+}
+
+/* Make all elements take up the full width of their container by default */
+html, body, #root {
+    height: 100%;
+    width: 100%;
+}
+
+/* Reset heading margins */
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* Reset the font size and line height of code elements */
+code, pre {
+    font-family: monospace, monospace;
+    font-size: inherit;
+}
+
+/* Reset the display of hidden attribute */
+[hidden] {
+    display: none;
+}
